@@ -28,11 +28,8 @@ $response = curl_exec($ch);
 $code = curl_getinfo($ch, CURLINFO_HTTP_CODE);
 
 if ($code == 200) {
-	exit(0); // success
-}  
-elseif ($code == 403) {
-	exit(2); // bad auth
+    exit(0); // success
 }
 else {
-	exit(1); // other error
+    exit(1); // other error
 }
